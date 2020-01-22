@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+<link rel="stylesheet" href="clock_style.css">
+
+<script src="clock.js"></script>
+
+<title>Uhr-Generator</title>
+
+</head>
+<body> 
+
+    <div id="container">
+
+        <h1>Geben Sie eine Uhrzeit ein</h1>
+
+        <form>Uhrzeit: <input type = "time" name="hour" id="time_input"><br></form> 
+
+        <svg viewBox="0 0 2000 2000"  width="256" height="256" id="clock-svg" style="margin-left: auto; margin-right: auto;">
+        </svg>
+
+        <label><input type="checkbox" name="white_background" value="white_background" id="white_background_input" checked="unchecked">Weißer Hintergrund (Standard: transparent)</label>
+        <form>Bildgröße: <input type = "number" name="imageSize" id="imageSize_input" min="0" max="4096"> px<br></form> 
+
+        <button>Bild herunterladen</button>
+
+        <canvas id="canvas" width="0" height="0"></canvas>
+
+    </div>
+    
+</body>
+</html>
