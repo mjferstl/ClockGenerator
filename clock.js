@@ -99,17 +99,24 @@ function drawClock(timeString) {
 
     var minuteLineLength = 100;
     var hourLineLength = 150;
+    var quarterHourLength = 180;
     for (i = 0; i < 60; i++) {
         var angle = 6*i * Math.PI/180;
         var lineLength = minuteLineLength;
+        var strokeWidth = 30;
 
         // change line formatting for hours
         if (i%5 == 0) {
             lineLength = hourLineLength;
         }
 
+        if (i%15 == 0) {
+            lineLength = quarterHourLength;
+            strokeWidth = 45;
+        }
+
         // create the line
-        var minuteLine = createAngularPath(angle,centerX,centerY,800,lineLength,30);
+        var minuteLine = createAngularPath(angle,centerX,centerY,800,lineLength,strokeWidth);
         clockSVG.appendChild(minuteLine);
     }
 
